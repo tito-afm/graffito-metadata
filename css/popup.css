@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #383838; */
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: visible;
+}
+
+article {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/pixel-brick-blank.jpg);
+    background-size: cover;
+}
+
+.popup {
+    font-family: "anonymous pro";
+    border: 1px solid #43FFAE;
+    color: white;
+    background: #363636a8;
+    backdrop-filter: blur(3px);
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 0 3px #43FFAE;
+    box-shadow: 0 0 50px rgb(0, 0, 0);
+    /* text-align: center; */
+}
+
+.p-name{
+    /* border: 1px solid red; */
+    font-family: "findreplace", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2.2em;
+    font-weight: 600;
+    padding-bottom: 5px;
+    text-shadow: 0 0 5px #ffffff87; 
+}
+
+.p-name div{
+    margin: 12px;
+    margin-top: 20px;
+    width: 15px;
+    height: 15px;
+    background-color: #43FFAE;
+}
+
+.p-identity {
+   
+    font-size: .8em;
+    border-top: 1px solid #43FFAE;
+    font-weight: 100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+
+}
+
+.p-identity p {
+    width: 100%;
+    padding: 20px;
+    line-height: 1.5em;
+    border-bottom: 1px solid #43FFAE;
+}
+
+.p-identity img {
+    padding: 12px;
+    border-left: 1px solid #43FFAE;
+    border-bottom: 1px solid #43FFAE;
+    width: 150px;
+}
+
+.p-info {
+    padding: 12px;
+    font-size: .8em;
+    border-bottom: 1px solid #43FFAE;
+}
+
+.p-info h3{
+    margin-bottom: 8px;
+}
+
+
+.p-also {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #363636a8;
+    font-size: .7em;
+    font-weight: 800;
+    background-color: #43FFAE;
+    width: 90px;
+    height: 18px;
+}
+
+.p-link-section {
+    padding: 8px;
+    display: flex;
+  flex-direction: column;
+    width: 100%;
+    font-size: .8em;
+    border-bottom: 1px solid #43FFAE;
+
+}
+
+.p-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: end ;
+    width: 100%;
+    margin-bottom: 8px;
+    border: 1px solid #ffffff;
+}
+
+.p-link p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 7px;
+    font-style: italic;
+    text-align: end;
+}
+
+.p-link img{
+    padding: 3px;
+    width: 75px;
+    height: 45px;
+}
+
+.p-time {
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    font-family: "findreplace" ;
+    font-size: 1.2em;
+    text-shadow: 0 0 10px #ffffffc3; 
+}
