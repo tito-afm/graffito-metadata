@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 54">
+  <g id="Icons">
+    <g>
+      <circle cx="34.5" cy="9" r="1.5" style="fill: #424242;"/>
+      <circle cx="33" cy="4" r="1.38" style="fill: #424242;"/>
+      <circle cx="33" cy="14" r="1.38" style="fill: #424242;"/>
+      <circle cx="29.5" cy="1.5" r="1.5" style="fill: #424242;"/>
+      <circle cx="29.5" cy="17" r="1.5" style="fill: #424242;"/>
+      <circle cx="29.5" cy="9" r="1.38" style="fill: #424242;"/>
+      <path d="M28,4.5c-.62,0-1.12.5-1.12,1.12s.5,1.13,1.12,1.13,1.12-.5,1.12-1.13-.5-1.12-1.12-1.12Z" style="fill: #424242;"/>
+      <path d="M26.88,12.62c0,.63.5,1.13,1.12,1.13s1.12-.5,1.12-1.13-.5-1.12-1.12-1.12-1.12.5-1.12,1.12Z" style="fill: #424242;"/>
+      <circle cx="25.5" cy="3" r="1.38" style="fill: #424242;"/>
+      <circle cx="25.5" cy="15" r="1.38" style="fill: #424242;"/>
+      <circle cx="25" cy="9" r="1.25" style="fill: #424242;"/>
+      <circle cx="22" cy="5" r="1.25" style="fill: #424242;"/>
+      <circle cx="22" cy="13" r="1.25" style="fill: #424242;"/>
+      <circle cx="21" cy="9" r="1.12" style="fill: #424242;"/>
+      <circle cx="18.5" cy="7" r="1.12" style="fill: #424242;"/>
+      <circle cx="18.5" cy="11" r="1.12" style="fill: #424242;"/>
+      <circle cx="15" cy="9" r="1" style="fill: #424242;"/>
+      <path d="M2.83,54h12.34c.53,0,1.04-.21,1.42-.59l.82-.82c.38-.38.59-.89.59-1.42v-29.17c0-.55-.45-1-1-1H1c-.55,0-1,.45-1,1v29.17c0,.53.21,1.04.59,1.42l.82.82c.38.38.89.59,1.42.59ZM3,26h2v4h-2v-4ZM3,34h2v15h-2v-15Z" style="fill: #424242;"/>
+      <path d="M1.2,17.98l-.2,1.02h16l-.2-1.02c-.47-2.3-2.47-3.95-4.8-3.98h-6c-2.33.03-4.33,1.69-4.8,3.98Z" style="fill: #424242;"/>
+      <path d="M12,8v-2h-6v6h6v-2h-2v-2h2Z" style="fill: #424242;"/>
+    </g>
+  </g>
+</svg>
