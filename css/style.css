@@ -29,7 +29,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-image: url(../img/pixel-brick-text-3.png);
+    background-image: url(../img/pixel-brick.png);
     background-size: cover;
    
   
@@ -457,10 +457,15 @@ canvas {
 
 
 
-/* graffiti layout */
+/* graffiti layout 1 */
 
 #graffiti-layout {
     /* border: 1px solid blue; */
+   opacity: 100%;
+    
+    /* filter: invert(1); */
+    position: absolute;
+    
     width: 100vw;
     height: 100vh;
     display: grid;
@@ -470,6 +475,26 @@ canvas {
 }
 
 #graffiti-layout>div {
+    /* border: 1px solid yellow; */
+    text-align: center;
+    padding: 20px 0;
+}
+
+#graffiti-layout2 {
+    /* border: 1px solid blue; */
+    mix-blend-mode:color-dodge;
+    opacity: 40%;
+    filter: blur(6px);
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    overflow: hidden;
+}
+
+#graffiti-layout2>div {
     /* border: 1px solid yellow; */
     text-align: center;
     padding: 20px 0;
@@ -530,6 +555,46 @@ margin-top: 20%;
 .item9 {
     margin-top: -15%;
     margin-left: -35%;
+}
+
+/* second wall */
+
+.item10 {
+    margin-top: -8%;
+}
+
+.item11 {
+
+}
+
+.item12 {
+    margin-top: -10%;
+    margin-left: -20%;
+}
+
+.item13 {
+ margin-top: -30%;
+ margin-left: 50%;
+}
+
+.item14 {
+    margin-top: -20%;
+
+}
+
+.item15 {
+    margin-top: -30%;
+    margin-left: -17%;
+}
+
+.item16 {
+    margin-top: -9%;
+    margin-left: ;
+}
+
+.item17 {
+    margin-top: -25%;
+    margin-left: -15%;
 }
 
 
