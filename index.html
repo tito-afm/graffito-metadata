@@ -15,68 +15,128 @@
 
 <body>
 
+    <div id="cursor"></div>
+
+    <section id="landing">
+        <div class="landing">
+            <div id="landing-display">
+                <img id="can" src="img/can.png" alt="">
+            <img  src="img/logo-transparent2.svg" alt="">
+            <button class="trigger">ENTER </button>
+            <div></div>
+            <p style="position: absolute; bottom: 20%; padding-top: 5px;">created by:</p>
+            <img id="blito" src="img/blito.png" alt="">
+            
+        </div>
+
+        <div id="landing-imgs">
+            
+
+        <!-- <img id="scene" src="img/scene.png" alt=""> 
+        
+   </div>
+
+        </div>
+
+    </section>
+
+
+
     <article>
+
 
         <section>
             <!-- Button to Open Popup -->
-    <button id="openPopup">Open Popup</button>
+            <button id="openPopup">Open Popup</button>
 
-    <!-- Popup Overlay (Background Dim) -->
-    <div id="popupOverlay" class="overlay">
-        <div class="popup">
-            <h2>Popup Window</h2>
-            <p>This is a pop-up overlay.</p>
-            <button id="closePopup">Close</button>
-        </div>
-    </div>
+            <!-- Popup Overlay (Background Dim) -->
+            <div id="popupOverlay" class="overlay">
+                <div class="popup">
+                    <h2>Popup Window</h2>
+                    <p>This is a pop-up overlay.</p>
+                    <button id="closePopup">Close</button>
+                </div>
+            </div>
 
         </section>
+
+        <canvas></canvas>
 
 
         <section id="graffiti-layout">
 
 
             <div class="item1">
-                <div  class="graffiti" data-popup="popup1">
-                    <img class="graf-hover" src="img/fiok color.png" alt="">
-                    <img style=" mix-blend-mode: hard-light;" class="graf-static" src="img/fiok-bw.png" alt="">
+                <div class="graffiti" data-popup="popup1">
+                    <img class="graf-hover" src="img/graffiti/fiok-color.png" alt="">
+                    <img style="mix-blend-mode: hard-light;" class="graf-static" src="img/graffiti/fiok-bw.png" alt="">
                 </div>
             </div>
 
             <div class="item2">
                 <div class="graffiti" data-popup="popup2">
-                    <img class="graf-hover" src="img/flesh-color.png" alt="">
-                    <img class="graf-static" src="img/flesh-bw.png" alt="">
+                    <img style="width: 340px;" class="graf-hover" src="img/graffiti/flesh-color.png" alt="">
+                    <img style="width: 340px;" class="graf-static" src="img/graffiti/flesh-bw.png" alt="">
                 </div>
                 <div></div>
             </div>
 
             <div class="item3">
                 <div class="graffiti" data-popup="popup3">
-                    <img class="graf-hover" src="img/second-color.png" alt="">
-                    <img class="graf-static" src="img/second-bw.png" alt="">
+                    <img class="graf-hover" src="img/graffiti/second-glow.png" alt="">
+                    <img class="graf-static" src="img/graffiti/second-bw.png" alt="">
                 </div>
             </div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+
+            <div class="item4">
+                <div class="graffiti" data-popup="popup4">
+                    <img class="graf-hover" src="img/graffiti/napalm-color.png" alt="">
+                    <img  class="graf-static" src="img/graffiti/napalm-bw.png" alt="">
+                </div>
+            </div>
+            <div class="item5">
+                <div class="graffiti" data-popup="popup5">
+                    <img style="width: 290px;" class="graf-hover" src="img/graffiti/iO-glow.png" alt="">
+                    <img style="width: 290px; mix-blend-mode: hard-light;" class="graf-static" src="img/graffiti/iO-bw.png" alt="">
+                </div>
+            </div>
+            <div class="item6">
+                <div class="graffiti" data-popup="popup6">
+                    <img class="graf-hover" src="img/graffiti/mices-glow.png" alt="">
+                    <img class="graf-static" src="img/graffiti/mices-bw.png" alt="">
+                </div>
+            </div>
+
+            <div class="item7">
+                <div class="graffiti" data-popup="popup7">
+                    <img style="width: 100px;" class="graf-hover" src="img/graffiti/smiley-glow.png" alt="">
+                    <img style="width: 100px;" class="graf-static" src="img/graffiti/smiley-bw.png" alt="">
+                </div>
+            </div>
+
+            <div class="item8">
+                <div class="graffiti" data-popup="popup8">
+                    <img class="graf-hover" src="img/graffiti/Rats-glow.png" alt="">
+                    <img class="graf-static" src="img/graffiti/Rats-bw.png" alt="">
+                </div>
+            </div>
+
+            <div class="item9">
+                <div class="graffiti" data-popup="popup9">
+                    <img style=" width: 400px;" class="graf-hover" src="img/graffiti/niky-glow.png" alt="">
+                    <img style="mix-blend-mode: hard-light; width: 400px;" class="graf-static" src="img/graffiti/niky-bw.png" alt="">
+                </div>
+            </div>
+
+        
 
 
         </section>
 
         <section id="nav-bottom">
             <div id="nav-logo">
-                <img src="img/logo-transparent2.svg" alt="">
+            <img class="trigger-undo" src="img/logo-transparent2.png" alt="">
             </div>
 
             <div id="vertical-line"></div>
@@ -154,28 +214,42 @@
 
             </section>
 
+            <div id="vertical-line"></div>
+
+            <audio id="myAudio" autoplay preload="auto" loop>
+                <source src="assets/02 Untitled.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
+            <div id="audio-buttons" style="display: flex; ">
+                <button onclick="document.getElementById('myAudio').play()"><img src="assets/playb.png" alt=""></button>
+                <button onclick="document.getElementById('myAudio').pause()"><img src="assets/pauseb.png" alt=""></button>
+                <!-- <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
+                <button onclick="document.getElementById('myAudio').mute()">Mute</button>  -->
+            </div>
+
 
 
         </section>
 
     </article>
 
-    <div id="popup1"  class="overlay">
+    <div id="popup1" class="overlay">
         <div class="popup">
 
             <header class="p-name">
-                <div></div>Fiok
+                <div></div>Fioke
+                <button class="closePopup">X</button>
             </header>
 
             <div class="p-identity">
                 <p>
-                   
+
                     <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
                     - Jam <br>
                     - Barrel <br>
                     - Gloss
                 </p>
-                <img src="img/port-1.png" alt="">
+                <img src="img/portraits/port-1.png" alt="">
             </div>
 
             <div class="p-info">
@@ -184,25 +258,23 @@
                     - affiliated with LOS crew <br><br>
                     - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
 
-        
+
             </div>
             <div class="p-also">
                 ALSO SEEN ON
             </div>
 
             <div class="p-link-section">
-                <div class="p-link" 
-                data-image="img/fiok-spotted.jpg"
-                data-title=" Trainyard, Mile End:2023"
-                data-text="A highly trafficked spot, having a visible piece here is significant.">
-                    <img src="img/fiok-spotted.jpg" alt="">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
                     <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
                 </div>
                 <div class="p-link">
-                    <img src="img/fiok-spotted.jpg" alt="">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
                     <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
                 </div>
-                
+
             </div>
 
             <div class="p-time">
@@ -210,31 +282,449 @@
                 <p>28-05-2024</p>
             </div>
 
-            <!-- <button class="closePopup">X</button> -->
+
 
         </div>
     </div>
 
     <div id="popup2" class="overlay">
         <div class="popup">
-            <h2>Popup 2</h2>
-            <p>Info about second graffiti piece.</p>
-            <button class="closePopup">Close</button>
-        </div>
-    </div>
-    
-    <div id="popup3" class="overlay">
-        <div class="popup">
-            <h2>Popup 3</h2>
-            <p>Info about third graffiti piece.</p>
-            <button class="closePopup">Close</button>
+
+            <header class="p-name">
+                <div></div>Flesh
+                <button class="closePopup">X</button>
+            </header>
+
+            <div class="p-identity">
+                <p>
+
+                    <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
+                    - Jam <br>
+                    - Barrel <br>
+                    - Gloss
+                </p>
+                <img src="img/portraits/port-2.png" alt="">
+            </div>
+
+            <div class="p-info">
+                <h3>NOTABLE INFO:</h3>
+                <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
+                    - affiliated with LOS crew <br><br>
+                    - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
+
+
+            </div>
+            <div class="p-also">
+                ALSO SEEN ON
+            </div>
+
+            <div class="p-link-section">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+                <div class="p-link">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+
+            </div>
+
+            <div class="p-time">
+                <p>11:54p</p>
+                <p>28-05-2024</p>
+            </div>
+
+
+
         </div>
     </div>
 
+    <div id="popup3" class="overlay">
+        <div class="popup">
+
+            <header class="p-name">
+                <div></div>Second
+                <button class="closePopup">X</button>
+            </header>
+
+            <div class="p-identity">
+                <p>
+
+                    <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
+                    - Jam <br>
+                    - Barrel <br>
+                    - Gloss
+                </p>
+                <img src="img/portraits/port-3.png" alt="">
+            </div>
+
+            <div class="p-info">
+                <h3>NOTABLE INFO:</h3>
+                <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
+                    - affiliated with LOS crew <br><br>
+                    - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
+
+
+            </div>
+            <div class="p-also">
+                ALSO SEEN ON
+            </div>
+
+            <div class="p-link-section">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+                <div class="p-link">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+
+            </div>
+
+            <div class="p-time">
+                <p>11:54p</p>
+                <p>28-05-2024</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div id="popup4" class="overlay">
+        <div class="popup">
+
+            <header class="p-name">
+                <div></div>Napalm
+                <button class="closePopup">X</button>
+            </header>
+
+            <div class="p-identity">
+                <p>
+
+                    <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
+                    - Jam <br>
+                    - Barrel <br>
+                    - Gloss
+                </p>
+                <img src="img/portraits/port-4.png" alt="">
+            </div>
+
+            <div class="p-info">
+                <h3>NOTABLE INFO:</h3>
+                <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
+                    - affiliated with LOS crew <br><br>
+                    - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
+
+
+            </div>
+            <div class="p-also">
+                ALSO SEEN ON
+            </div>
+
+            <div class="p-link-section">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+                <div class="p-link">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+
+            </div>
+
+            <div class="p-time">
+                <p>11:54p</p>
+                <p>28-05-2024</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div id="popup5" class="overlay">
+        <div class="popup">
+
+            <header class="p-name">
+                <div></div>iO
+                <button class="closePopup">X</button>
+            </header>
+
+            <div class="p-identity">
+                <p>
+
+                    <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
+                    - Jam <br>
+                    - Barrel <br>
+                    - Gloss
+                </p>
+                <img src="img/portraits/port-5.png" alt="">
+            </div>
+
+            <div class="p-info">
+                <h3>NOTABLE INFO:</h3>
+                <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
+                    - affiliated with LOS crew <br><br>
+                    - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
+
+
+            </div>
+            <div class="p-also">
+                ALSO SEEN ON
+            </div>
+
+            <div class="p-link-section">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+                <div class="p-link">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+
+            </div>
+
+            <div class="p-time">
+                <p>11:54p</p>
+                <p>28-05-2024</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div id="popup6" class="overlay">
+        <div class="popup">
+
+            <header class="p-name">
+                <div></div>Mices
+                <button class="closePopup">X</button>
+            </header>
+
+            <div class="p-identity">
+                <p>
+
+                    <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
+                    - Jam <br>
+                    - Barrel <br>
+                    - Gloss
+                </p>
+                <img src="img/portraits/port-6.png" alt="">
+            </div>
+
+            <div class="p-info">
+                <h3>NOTABLE INFO:</h3>
+                <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
+                    - affiliated with LOS crew <br><br>
+                    - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
+
+
+            </div>
+            <div class="p-also">
+                ALSO SEEN ON
+            </div>
+
+            <div class="p-link-section">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+                <div class="p-link">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+
+            </div>
+
+            <div class="p-time">
+                <p>11:54p</p>
+                <p>28-05-2024</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div id="popup7" class="overlay">
+        <div class="popup">
+
+            <header class="p-name">
+                <div></div>About
+                <button class="closePopup">X</button>
+            </header>
+
+            <div class="p-identity">
+                <p>
+
+                    <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
+                    - Jam <br>
+                    - Barrel <br>
+                    - Gloss
+                </p>
+                <img src="'' alt="">
+            </div>
+
+            <div class="p-info">
+                <h3>NOTABLE INFO:</h3>
+                <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
+                    - affiliated with LOS crew <br><br>
+                    - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
+
+
+            </div>
+            <div class="p-also">
+                ALSO SEEN ON
+            </div>
+
+            <div class="p-link-section">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+                <div class="p-link">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+
+            </div>
+
+            <div class="p-time">
+                <p>11:54p</p>
+                <p>28-05-2024</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div id="popup8" class="overlay">
+        <div class="popup">
+
+            <header class="p-name">
+                <div></div>Rats
+                <button class="closePopup">X</button>
+            </header>
+
+            <div class="p-identity">
+                <p>
+
+                    <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
+                    - Jam <br>
+                    - Barrel <br>
+                    - Gloss
+                </p>
+                <img src="img/portraits/port-7.png" alt="">
+            </div>
+
+            <div class="p-info">
+                <h3>NOTABLE INFO:</h3>
+                <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
+                    - affiliated with LOS crew <br><br>
+                    - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
+
+
+            </div>
+            <div class="p-also">
+                ALSO SEEN ON
+            </div>
+
+            <div class="p-link-section">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+                <div class="p-link">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+
+            </div>
+
+            <div class="p-time">
+                <p>11:54p</p>
+                <p>28-05-2024</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div id="popup9" class="overlay">
+        <div class="popup">
+
+            <header class="p-name">
+                <div></div>Niky
+                <button class="closePopup">X</button>
+            </header>
+
+            <div class="p-identity">
+                <p>
+
+                    <strong style="font-size: 1.2em;"> ALIASES: </strong> <br>
+                    - Jam <br>
+                    - Barrel <br>
+                    - Gloss
+                </p>
+                <img src="img/portraits/port-9.png" alt="">
+            </div>
+
+            <div class="p-info">
+                <h3>NOTABLE INFO:</h3>
+                <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
+                    - affiliated with LOS crew <br><br>
+                    - This tag was crossed out by Hex in Verdun last month, see the wall below.</p>
+
+
+            </div>
+            <div class="p-also">
+                ALSO SEEN ON
+            </div>
+
+            <div class="p-link-section">
+                <div class="p-link" data-image="img/graffiti/fiok-spotted.jpg" data-title=" Trainyard, Mile End:2023"
+                    data-text="A highly trafficked spot, having a visible piece here is significant.">
+                    <img src="img//graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+                <div class="p-link">
+                    <img src="img/graffiti/fiok-spotted.jpg" alt="">
+                    <p>TRAINYARD, MILE END <br><strong>2023</strong></p>
+                </div>
+
+            </div>
+
+            <div class="p-time">
+                <p>11:54p</p>
+                <p>28-05-2024</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    
+
     <script src="js/script.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leader-line-new@1.1.9/leader-line.min.js"></script>
-    
-    
+
+
 </body>
 
 </html>
