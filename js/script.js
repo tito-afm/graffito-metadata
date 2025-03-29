@@ -28,6 +28,24 @@ function reOpenLand() {
     document.getElementById("landing").style.height = "100%";
 }
 
+// spray page opener
+
+const trig2 = document.querySelector('#spray-trigger');
+const trigUndo2 = document.querySelector('#close-spray');
+
+
+trig2.addEventListener('click', openSpray);
+trigUndo2.addEventListener('click', closeSpray);
+
+function openSpray() {
+    document.getElementById("spray-section").style.height = "100%";
+
+}
+
+function closeSpray() {
+    document.getElementById("spray-section").style.height = "0%";
+}
+
 
 
 
