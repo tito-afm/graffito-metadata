@@ -17,7 +17,7 @@
 
     <div id="cursor"></div>
 
-    <section id="landing">
+   <!-- <section id="landing">
         <div class="landing">
             <div id="landing-display">
                 <img id="can" src="img/can.png" alt="">
@@ -29,21 +29,32 @@
             
         </div>
 
-        <div id="landing-imgs">
-            
-
-        <!-- <img id="scene" src="img/scene.png" alt=""> 
         
-   </div>
+
+    
+
+    </section> -->
+
+    <section id="spray-section">
+        <div id="spray">
+            <canvas></canvas>
+
+            <div id="spray-buttons">
+            <button id="clear-btn">Reset</button>
+            <button id="green-btn">Green</button>
+            <button id="black-btn">Black</button>
+            <button id="close-spray">Close</button>
+            </div>
 
         </div>
+
+        
 
     </section>
 
 
 
-    <article>
-
+    <article
 
         <section>
             <!-- Button to Open Popup -->
@@ -220,11 +231,11 @@
 
 
                 <div class="timeline-node">
-                    <div class="year-node"></div>
+                    <div id="tl-1" class="year-node"></div>
                     <p>2022</p>
                 </div>
 
-                <div class="timeline-node">
+                <!-- <div class="timeline-node">
                     <div class="small-node"></div>
                     <p class="small-node-num">I</p>
                 </div>
@@ -242,14 +253,14 @@
                 <div class="timeline-node">
                     <div class="small-node"></div>
                     <p class="small-node-num">IV</p>
-                </div>
+                </div> -->
 
                 <div class="timeline-node">
-                    <div class="year-node"></div>
+                    <div id="tl-2" class="year-node"></div>
                     <p>2023</p>
                 </div>
 
-                <div class="timeline-node">
+                <!-- <div class="timeline-node">
                     <div class="small-node"></div>
                     <p class="small-node-num">I</p>
                 </div>
@@ -267,21 +278,11 @@
                 <div class="timeline-node">
                     <div class="small-node"></div>
                     <p class="small-node-num">IV</p>
-                </div>
+                </div> -->
 
                 <div class="timeline-node">
-                    <div class="year-node-active"></div>
+                    <div id="tl-3" class="year-node-active"></div>
                     <p>2024</p>
-                </div>
-
-                <div class="timeline-node">
-                    <div class="small-node"></div>
-                    <p class="small-node-num">I</p>
-                </div>
-
-                <div class="timeline-node">
-                    <div class="small-node"></div>
-                    <p class="small-node-num">II</p>
                 </div>
 
                 <div id="dotted-line"></div>
@@ -290,8 +291,12 @@
 
             <div id="vertical-line"></div>
 
+            <div id="spray-button"><img src="assets/Asset-1.svg" alt=""></div>
+
+            <div id="vertical-line"></div>
+
             <audio id="myAudio" autoplay preload="auto" loop>
-                <source src="assets/02 Untitled.mp3" type="audio/mp3">
+                <!-- <source src="assets/02 Untitled.mp3" type="audio/mp3"> -->
                 Your browser does not support the audio element.
             </audio>
             <div id="audio-buttons" style="display: flex; ">
@@ -796,6 +801,8 @@
     
 
     <script src="js/script.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/draw.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/leader-line-new@1.1.9/leader-line.min.js"></script>
 
 
