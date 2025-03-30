@@ -141,11 +141,11 @@ color: #43FFAE;
  /* spray page */
 
  #spray-section {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     position: fixed;
     z-index: 9999;
     width: 100%;
-    height: 100%;
+    height: 0%;
     top: 0;
     left: 0;
     overflow: hidden;
@@ -158,8 +158,17 @@ color: #43FFAE;
     /* animation: revealDown ease-in .5s; */
 }
 
+#spray-section img {
+    position: absolute;
+    top: 1;
+    left: 0;
+    margin-left: 2em;
+    width: 150px;
+}
+
 #spray {
-    border: 1px dotted white;
+    position: relative;
+    border: 1px dotted #ffffffbe;
     width: 1000px;
     height: 700px;
     /* border: 1px dotted rgb(255, 255, 255); */
@@ -172,16 +181,7 @@ color: #43FFAE;
     /* background-color: rgba(255, 255, 255, 0.464); */
 }
 
-#spray h1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-left: .4em;
-    font-family: "findreplace";
-    font-weight: 600;
-    font-size: 2.5em;
-    color: white;
-}
+
 
 #spray-nav {
     margin-right: 5em;
@@ -213,13 +213,70 @@ color: #43FFAE;
         }
 
 
+#about-section {
+        /* border: 1px solid green; */
+        position: fixed;
+        z-index: 9999;
+        /* width: 52%; */
+        width: 0%;
+        height: 91%;
+        top: 0;
+        right: 0;
+        overflow: hidden;
+        background-color: #383838ae;
+        transition: .5s ease-in-out;
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        backdrop-filter: blur(10px);
+        /* animation: revealDown ease-in .5s; */
 
-canvas {
-    position: absolute;
-    top: 40;
-    left: 40;
+}
+
+
+#about-section div{
+    padding: 1em;
+    border: 1px dotted white;
     width: 100%;
-    height: 100%;
+    margin: 1em;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+#about-section img {
+    margin-right: 1em;
+   width: 41%;
+   align-self: center;
+}
+
+#about-section h1{
+    font-family: "findreplace";
+    color: white;
+    font-weight: 200;
+    font-size: 4em;
+    margin-bottom: -.3em;
+    text-shadow: 0 0 8px white;
+}
+
+#about-section h2{
+    font-family: "findreplace";
+    color: white;
+    font-weight: 600;
+    font-size: 2.6em;
+    
+}
+
+#about-section p{
+    text-indent: 40px;
+    padding-left: 3em;
+    padding-top: 3em;
+    padding-right: 3em;
+   margin-bottom: -2em;
+    font-family: "anonymous pro";
+    color: white;
+    font-size: .7em;
+    line-height: 1.5em;
 }
 
 article {
@@ -233,6 +290,7 @@ article {
 }
 
 canvas {
+    background-image: url(..img/pixel-brick-blank.jpg);
     position: absolute;
     top: 0;
     left: 0;
@@ -781,8 +839,9 @@ margin-top: 20%;
 
 #timeline {
     margin-left: 2%;
+    /* margin-right: 24em; */
     height: 90%;
-    width: 50%;
+    width: 68%;
     /* border: 1px solid yellow; */
     display: flex;
     flex-direction: row;
@@ -793,7 +852,7 @@ margin-top: 20%;
 #dotted-line {
     position: absolute;
     z-index: -1;
-    width: 75%;
+    width: 62%;
     margin-left: 1.8%;
     top: 51.5%;
     border: .5px dashed white;
@@ -880,6 +939,13 @@ margin-top: 20%;
     margin: 10px;
     background-color: white;
     /* border: 5px solid #43FFAE; */
+    transition: .5s;
+}
+
+#audio-buttons button:hover {
+    margin: 10px;
+    background-color: #43ffae;
+    /* border: 5px solid #43FFAE; */
 }
 
 #audio-buttons img {
@@ -888,4 +954,27 @@ margin-top: 20%;
     padding: 2px;
     padding-bottom: 0px;
     
+}
+
+#about {
+    /* border: 1px solid red; */
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 100px;
+   transition: .3s;
+}
+
+#about h1{
+    font-size: 1.5em;
+    color: #ffffff;
+    font-weight: 200;
+    
+}
+
+#about:hover {
+    filter: blur(3px);
+    
+    
+
 }

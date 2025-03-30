@@ -17,42 +17,62 @@
 
     <div id="cursor"></div>
 
-   <!-- <section id="landing">
+    <section id="landing">
         <div class="landing">
             <div id="landing-display">
                 <img id="can" src="img/can.png" alt="">
-            <img  src="img/logo-transparent2.svg" alt="">
-            <button class="trigger">ENTER </button>
-            <div></div>
-            <p style="position: absolute; bottom: 20%; padding-top: 5px;">created by:</p>
-            <img id="blito" src="img/blito.png" alt="">
-            
-        </div>
+                <img src="img/logo-transparent2.svg" alt="">
+                <button class="trigger">ENTER </button>
+                <div></div>
+                <p style="position: absolute; bottom: 20%; padding-top: 5px;">created by:</p>
+                <img id="blito" src="img/blito.png" alt="">
 
-        
-
-    
-
-    </section> -->
+            </div>
+    </section>
 
     <section id="spray-section">
+        <img src="img/can.png" alt="">
         <div id="spray">
-            <h1>SPRAY <br>PRACTICE</h1>
             <canvas></canvas>
-
-            <div id="spray-nav">
+        </div>
+        <div id="spray-nav">
+            <!-- <audio id="spraySound" src="assets/spray-audio.mp3"></audio> -->
             <button id="clear-btn">Reset</button>
             <button style="background-color: #43FFAE; color: #000000;" id="green-btn">Green</button>
             <button style="background-color: #000000;" id="black-btn">Black</button>
+            <button style="background-color: #ffffff; color: black;" id="white-btn">White</button>
             <button id="close-spray">Close</button>
-            </div>
-
         </div>
     </section>
 
+    <section id="about-section">
+        <div>
+            <h1>ABOUT</h1>
+            <h2>graffito metadata</h2>
+            <p>Graffiti is a means of subcultural social networking, and the walls and surfaces it exists on function as
+                the physical archive of this activity. Observers engage with these records in a nonlinear fashion.
+                Therefore, parallels can be drawn between the engagement with graffiti and the engagement with the
+                digital archive. The nonlinear presentation of information and self-directed navigation allow for
+                observers to make their own connections and draw their own conclusions.
+
+                <p>This website aims to emulate my personal, subjective experience observing the graffiti in my local
+                neighbourhood in the form of a digital archive. Positioned as a complete outsider to the culture I have
+                zero insight as to who is behind what piece, and what the relationships are between the various names on
+                a wall. So I fill in the blanks, the who/what/where/when/why, with imagined characters and narratives.</p>
+                
+                <p>The graffiti here is sourced from my surrounding environment, with the “metadata” attached to each
+                respective piece being completely fictionalized. No attempt to present some objective, empirical
+                information about the real writer is being made here. Rather, Graffito Metadata is a far-fetched
+                expression of the information outsiders could never access when standing in front of a graffito.</p>
+
+            </p>
+        </div>
+        <img src="img/portraits/port-blito.png" alt="">
+
+    </section>
 
 
-    <article
+    <article>
 
         <section>
             <!-- Button to Open Popup -->
@@ -101,13 +121,14 @@
             <div class="item4">
                 <div class="graffiti" data-popup="popup4">
                     <img class="graf-hover" src="img/graffiti/napalm-color.png" alt="">
-                    <img  class="graf-static" src="img/graffiti/napalm-bw.png" alt="">
+                    <img class="graf-static" src="img/graffiti/napalm-bw.png" alt="">
                 </div>
             </div>
             <div class="item5">
                 <div class="graffiti" data-popup="popup5">
                     <img style="width: 290px;" class="graf-hover" src="img/graffiti/iO-glow.png" alt="">
-                    <img style="width: 290px; mix-blend-mode: hard-light;" class="graf-static" src="img/graffiti/iO-bw.png" alt="">
+                    <img style="width: 290px; mix-blend-mode: hard-light;" class="graf-static"
+                        src="img/graffiti/iO-bw.png" alt="">
                 </div>
             </div>
             <div class="item6">
@@ -134,11 +155,12 @@
             <div class="item9">
                 <div class="graffiti" data-popup="popup9">
                     <img style=" width: 400px;" class="graf-hover" src="img/graffiti/niky-glow.png" alt="">
-                    <img style="mix-blend-mode: hard-light; width: 400px;" class="graf-static" src="img/graffiti/niky-bw.png" alt="">
+                    <img style="mix-blend-mode: hard-light; width: 400px;" class="graf-static"
+                        src="img/graffiti/niky-bw.png" alt="">
                 </div>
             </div>
 
-        
+
 
 
         </section>
@@ -175,8 +197,8 @@
                     <img style="width: 400px;" class="graf-static" src="img/graffiti/cowboy-bw.png" alt="">
                 </div>
             </div>
-            
-<div></div>
+
+            <div></div>
 
             <div class="item14">
                 <div class="graffiti" data-popup="popup14">
@@ -185,7 +207,7 @@
                 </div>
             </div>
 
-           
+
 
             <div class="item15">
                 <div class="graffiti" data-popup="popup15">
@@ -194,7 +216,7 @@
                 </div>
             </div>
 
-            
+
 
             <div class="item16">
                 <div class="graffiti" data-popup="popup16">
@@ -210,16 +232,16 @@
                 </div>
             </div>
 
-           
 
-        
+
+
 
 
         </section>
 
         <section id="nav-bottom">
             <div id="nav-logo">
-            <img class="trigger-undo" src="img/logo-transparent2.png" alt="">
+                <img class="trigger-undo" src="img/logo-transparent2.png" alt="">
             </div>
 
             <div id="vertical-line"></div>
@@ -255,19 +277,30 @@
 
             <div id="vertical-line"></div>
 
+            <audio id="can-sound" src="assets/can-audio.mp3"></audio>
             <div id="spray-button"><img id="spray-trigger" src="assets/Asset-1.svg" alt=""></div>
 
             <div id="vertical-line"></div>
 
             <audio id="myAudio" autoplay preload="auto" loop>
-                <!-- <source src="assets/02 Untitled.mp3" type="audio/mp3"> -->
+                <source src="assets/02 Untitled.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
             </audio>
+
+
+
             <div id="audio-buttons" style="display: flex; ">
                 <button onclick="document.getElementById('myAudio').play()"><img src="assets/playb.png" alt=""></button>
-                <button onclick="document.getElementById('myAudio').pause()"><img src="assets/pauseb.png" alt=""></button>
+                <button onclick="document.getElementById('myAudio').pause()"><img src="assets/pauseb.png"
+                        alt=""></button>
                 <!-- <button onclick="document.getElementById('player').volume += 0.1">Vol +</button> 
                 <button onclick="document.getElementById('myAudio').mute()">Mute</button>  -->
+            </div>
+
+            <div id="vertical-line"></div>
+
+            <div id="about">
+                <h1 id="about-button">about</h1>
             </div>
 
 
@@ -619,7 +652,7 @@
                 <img src="'' alt="">
             </div>
 
-            <div class="p-info">
+            <div class=" p-info">
                 <h3>NOTABLE INFO:</h3>
                 <p>- Edit has been known to stake out spots to catch those who’d cover his pieces. <br><br>
                     - affiliated with LOS crew <br><br>
@@ -762,7 +795,7 @@
         </div>
     </div>
 
-    
+
 
     <script src="js/script.js"></script>
     <script src="js/timeline.js"></script>

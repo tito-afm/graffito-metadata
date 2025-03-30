@@ -39,11 +39,18 @@ trigUndo2.addEventListener('click', closeSpray);
 
 function openSpray() {
     document.getElementById("spray-section").style.height = "100%";
+    const audio = document.querySelector("#can-sound");
+    if (audio) {setTimeout(() => {
+        audio.play();
+    }, 0); // 5
+    }
 
 }
 
 function closeSpray() {
-    document.getElementById("spray-section").style.height = "0%";
+    let section = document.getElementById("spray-section");
+    section.style.height = "0%";
+    section.offsetHeight; // Forces browser to recognize style change
 }
 
 
