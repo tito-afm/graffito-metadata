@@ -37,7 +37,7 @@ body {
 
 #landing {
     position: fixed;
-    z-index: 9999;
+    z-index: 1000;
     width: 100%;
     height: 100%;
     top: 0;
@@ -143,10 +143,10 @@ color: #43FFAE;
  #spray-section {
     /* border: 1px solid green; */
     position: fixed;
-    z-index: 9999;
+    z-index: 1000;
     width: 100%;
-    height: 0%;
-    top: 0;
+    height: 100%;
+    top: -100%;
     left: 0;
     overflow: hidden;
     background-color: #383838ae;
@@ -216,12 +216,12 @@ color: #43FFAE;
 #about-section {
         /* border: 1px solid green; */
         position: fixed;
-        z-index: 9999;
+        z-index: 1000;
         /* width: 52%; */
-        width: 0%;
+        width: 52%;
         height: 91%;
         top: 0;
-        right: 0;
+        right: -52%;
         overflow: hidden;
         background-color: #383838ae;
         transition: .5s ease-in-out;
@@ -229,24 +229,37 @@ color: #43FFAE;
         /* align-items: center; */
         justify-content: center;
         backdrop-filter: blur(10px);
+        overflow: hidden;
         /* animation: revealDown ease-in .5s; */
+        
 
 }
 
+#about-container {
+    /* border: 1px solid red; */
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
 
-#about-section div{
+#about-content{
+    height: auto;
     padding: 1em;
     border: 1px dotted white;
     width: 100%;
-    margin: 1em;
-    
+    /* margin: 1em; */
     display: flex;
     flex-direction: column;
+    /* padding-bottom: 2em; */
 }
 
 #about-section img {
+    height: auto;
+   
     margin-right: 1em;
-   width: 41%;
+   width: 43%;
    align-self: center;
 }
 
@@ -255,28 +268,44 @@ color: #43FFAE;
     color: white;
     font-weight: 200;
     font-size: 4em;
+    margin-top: -.2em;
     margin-bottom: -.3em;
     text-shadow: 0 0 8px white;
 }
 
 #about-section h2{
+    margin-bottom: .2em;
     font-family: "findreplace";
     color: white;
     font-weight: 600;
-    font-size: 2.6em;
+    font-size: 2.4em;
     
 }
 
-#about-section p{
+#about-content p{
+    /* border: 1px solid yellow; */
     text-indent: 40px;
-    padding-left: 3em;
-    padding-top: 3em;
-    padding-right: 3em;
-   margin-bottom: -2em;
+    padding: 1em;
+    
     font-family: "anonymous pro";
     color: white;
     font-size: .7em;
     line-height: 1.5em;
+}
+
+#credit { 
+    color: white;
+    height: auto;
+    padding: 1em;
+    border: 1px dotted white;
+    width: 70%;
+    /* margin: 1em; */
+    display: flex;
+    flex-direction: column;
+    font-size: .6em;
+    font-family: "anonymous pro";
+    line-height: 1.2em;
+    
 }
 
 article {
@@ -310,6 +339,7 @@ canvas {
 
 .popup {
     position: relative;
+    z-index: 100;
     font-family: "anonymous pro";
     border: 1px solid #43FFAE;
     color: white;
@@ -512,7 +542,7 @@ canvas {
     box-shadow: 0 0 3px #43FFAE;
     box-shadow: 0 0 50px rgb(0, 0, 0);
     color: white;
-    z-index: 100; /* Higher than the parent popup */
+    z-index: 10; /* Higher than the parent popup */
 }
 
 
@@ -604,17 +634,15 @@ canvas {
 #graffiti-layout {
     /* border: 1px solid blue; */
    opacity: 100%;
-    
     /* filter: invert(1); */
     position: absolute;
-    
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     overflow: hidden;
-    transition: opacity 0.5s ease, filter 0.5s ease, z-index 0.5s ease;
+    transition: opacity 2s ease, filter 2s ease, z-index 2s ease;
 }
 
 #graffiti-layout>div {
@@ -625,9 +653,9 @@ canvas {
 
 #graffiti-layout2 {
     /* border: 1px solid blue; */
-    mix-blend-mode:color-dodge;
+    /* mix-blend-mode:color-dodge; */
     opacity: 40%;
-    filter: blur(6px);
+    filter: blur(3px);
     z-index: -1;
     width: 100vw;
     height: 100vh;
@@ -635,7 +663,7 @@ canvas {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     overflow: hidden;
-    transition: opacity 0.5s ease, filter 0.5s ease, z-index 0.5s ease;
+    transition: opacity 2s ease, filter 2s ease, z-index 2s ease;
 }
 
 #graffiti-layout2>div {
@@ -654,7 +682,7 @@ canvas {
    
 }
 
-.item1 #graffiti {
+.item1  {
     grid-column: 1/2;
     grid-row: 1/2;
     margin-left: 20%;
@@ -732,8 +760,8 @@ margin-top: 20%;
 }
 
 .item16 {
-    margin-top: -9%;
-    margin-left: ;
+    margin-top: -13%;
+    margin-left: -20%;
 }
 
 .item17 {
@@ -755,7 +783,7 @@ margin-top: 20%;
     position: absolute;
     width: 34.9vw;
     opacity: 0;
-    transition: .4s ease-out;
+    transition: opacity 0.4s ease-out;
 }
 
 
@@ -765,7 +793,7 @@ margin-top: 20%;
     position: absolute;
     width: 49.9vw;
     opacity: 0;
-    transition: .4s ease-out;
+    transition: opacity .4s ease-out;
 }
 
 .graf-static {
@@ -798,7 +826,7 @@ margin-top: 20%;
     font-weight: 300;
     font-style: normal;
     position: fixed;
-    z-index: 0;
+    z-index: 100;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -852,7 +880,7 @@ margin-top: 20%;
 #dotted-line {
     position: absolute;
     z-index: -1;
-    width: 62%;
+    width: 60%;
     margin-left: 1.8%;
     top: 51.5%;
     border: .5px dashed white;
@@ -879,7 +907,7 @@ margin-top: 20%;
 
 .year-node {
     position: relative;
-    z-index: 9999;
+    z-index: 1000;
     margin-top: 1.3em;
     width: 20px;
     height: 20px;
@@ -887,6 +915,11 @@ margin-top: 20%;
     background-color: white;
     pointer-events: auto; /* Ensure they can be clicked */
     cursor: pointer; /* Changes cursor to indicate interactivity */
+    transition: .5s;
+}
+
+.year-node:hover {
+    box-shadow: 0 0 10px #43FFAE;
 }
 
 .year-node-active {
@@ -899,7 +932,7 @@ margin-top: 20%;
 
 .small-node {
     position: relative;
-    z-index: 9999;
+    z-index: 1000;
     margin-top: 1em;
     width: 10px;
     height: 10px;
@@ -963,18 +996,23 @@ margin-top: 20%;
    justify-content: center;
    width: 100px;
    transition: .3s;
+   
+  
 }
 
 #about h1{
     font-size: 1.5em;
     color: #ffffff;
     font-weight: 200;
+  
     
 }
 
 #about:hover {
     filter: blur(3px);
-    
-    
 
+}
+
+#about button{
+    pointer-events: auto;
 }

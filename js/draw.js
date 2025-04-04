@@ -53,7 +53,7 @@ function startDrawing(e) {
 
     // Play the next spray sound in sequence
     const audio = new Audio(spraySounds[soundIndex]); 
-    audio.volume = 0.2;
+    audio.volume = 0.3;
     audio.play();
 
     // Move to the next sound, loop back to the first after the third

@@ -14,7 +14,7 @@ trig.addEventListener('click', openLand);
 trigUndo.addEventListener('click', reOpenLand)
 
 function openLand() {
-    document.getElementById("landing").style.height = "0%";
+    document.getElementById("landing").style.top = "-100%";
 
     const audio = document.querySelector("#myAudio");
     if (audio) {setTimeout(() => {
@@ -25,7 +25,7 @@ function openLand() {
 }
 
 function reOpenLand() {
-    document.getElementById("landing").style.height = "100%";
+    document.getElementById("landing").style.top = "0";
 }
 
 // spray page opener
@@ -38,7 +38,7 @@ trig2.addEventListener('click', openSpray);
 trigUndo2.addEventListener('click', closeSpray);
 
 function openSpray() {
-    document.getElementById("spray-section").style.height = "100%";
+    document.getElementById("spray-section").style.top = "0";
     const audio = document.querySelector("#can-sound");
     if (audio) {setTimeout(() => {
         audio.play();
@@ -49,10 +49,33 @@ function openSpray() {
 
 function closeSpray() {
     let section = document.getElementById("spray-section");
-    section.style.height = "0%";
+    section.style.top = "-100%";
     section.offsetHeight; // Forces browser to recognize style change
 }
 
+const aboutButton = document.querySelector("#about-button");
+const aboutSection = document.querySelector("#about-section");
+
+function toggleAbout() {
+    if (aboutSection.style.right === "-52%") {
+        aboutSection.style.right = "0";
+    } else {
+        aboutSection.style.right = "-52%";
+    }
+}
+
+// Click event on #about-button
+aboutButton.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevents immediate closing when clicking the button
+    toggleAbout();
+});
+
+// Close when clicking outside
+document.addEventListener("click", (event) => {
+    if (!aboutSection.contains(event.target) && event.target !== aboutButton) {
+        aboutSection.style.right = "-52%";
+    }
+});
 
 
 
@@ -215,7 +238,7 @@ function makeDraggable(popup) {
         startTop = rect.top;
 
         popup.style.position = "fixed"; // Use fixed positioning for consistency
-        popup.style.zIndex = "1000";
+        popup.style.zIndex = "9999";
     });
 
     document.addEventListener("mousemove", (e) => {
@@ -247,16 +270,22 @@ document.addEventListener("click", function (event) {
     if (event.target.classList.contains("p-link")) {
         event.stopPropagation();
 
-        // Remove existing nested popups before creating a new one
-        let existingPopup = document.querySelector(".nested-popup");
-        if (existingPopup) existingPopup.remove();
+        // Find the closest parent popup
+        let parentPopup = event.target.closest(".popup");
+        if (!parentPopup) {
+            console.warn("No parent .popup found for p-link. Nested popup cannot be attached.");
+            return;
+        }
 
-        // Get unique content from data attributes
+        // Remove any existing nested popups inside THIS popup only
+        parentPopup.querySelectorAll(".nested-popup").forEach(popup => popup.remove());
+
+        // Get content from the clicked p-link
         let imageSrc = event.target.dataset.image;
         let popupText = event.target.dataset.text;
         let titleText = event.target.dataset.title;
 
-        // Create the nested popup dynamically
+        // Create new nested popup
         let nestedPopup = document.createElement("div");
         nestedPopup.classList.add("nested-popup");
         nestedPopup.innerHTML = `
@@ -270,20 +299,19 @@ document.addEventListener("click", function (event) {
             </div>
         `;
 
-        // Append it to the body
-        document.body.appendChild(nestedPopup);
+        // Append inside the correct popup
+        parentPopup.appendChild(nestedPopup);
 
-        // Ensure the popup starts at a reasonable position
+        // Debugging output
+        console.log("Nested popup added inside:", parentPopup);
+
+        // Style & position it
+        nestedPopup.style.position = "absolute";
         nestedPopup.style.left = "50%";
         nestedPopup.style.top = "50%";
         nestedPopup.style.transform = "translate(-50%, -50%)"; // Center it
 
-        // Make the nested popup draggable
-        // setTimeout(() => {
-        //     makeDraggable(nestedPopup);
-        // }, 10);
-
-        // Close the nested popup when clicking the button
+        // Close event
         nestedPopup.querySelector(".close-nested").addEventListener("click", function () {
             nestedPopup.remove();
         });
