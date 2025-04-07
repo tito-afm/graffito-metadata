@@ -43,8 +43,10 @@ body {
     top: 0;
     left: 0;
     overflow: hidden;
-    background-color: #383838ae;
-    transition: .5s ease-in-out;
+    /* background-color: #383838ae; */
+    background-color: #383838;
+    transition: .7s ease-in-out;
+    /* transition: background-color 1s ease; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -219,13 +221,14 @@ color: #43FFAE;
         z-index: 1000;
         /* width: 52%; */
         width: 52%;
-        height: 91%;
+        height: 92%;
         top: 0;
         right: -52%;
         overflow: hidden;
         background-color: #383838ae;
         transition: .5s ease-in-out;
         display: flex;
+        flex-direction: row;
         /* align-items: center; */
         justify-content: center;
         backdrop-filter: blur(10px);
@@ -242,24 +245,28 @@ color: #43FFAE;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
 
 #about-content{
     height: auto;
+    min-height: 75%;
     padding: 1em;
     border: 1px dotted white;
-    width: 100%;
+    width: 8   0%;
+    /* height: 80%; */
+    
     /* margin: 1em; */
     display: flex;
     flex-direction: column;
+    /* justify-content: space-between; */
     /* padding-bottom: 2em; */
 }
 
 #about-section img {
     height: auto;
-   
     margin-right: 1em;
-   width: 43%;
+   width: 41%;
    align-self: center;
 }
 
@@ -274,11 +281,12 @@ color: #43FFAE;
 }
 
 #about-section h2{
-    margin-bottom: .2em;
+    margin-bottom: .5em;
+    
     font-family: "findreplace";
     color: white;
     font-weight: 600;
-    font-size: 2.4em;
+    font-size: 2em;
     
 }
 
@@ -294,12 +302,14 @@ color: #43FFAE;
 }
 
 #credit { 
-    color: white;
-    height: auto;
+    color: #383838 !important;
+    background-color: rgba(255, 255, 255, 0.818);
+    height: 8%;
     padding: 1em;
+    padding-top: .5em;
     border: 1px dotted white;
     width: 70%;
-    /* margin: 1em; */
+    margin: 1em;
     display: flex;
     flex-direction: column;
     font-size: .6em;
@@ -319,7 +329,7 @@ article {
 }
 
 canvas {
-    background-image: url(..img/pixel-brick-blank.jpg);
+    background-image: url(..img/pixel-brick-canvas3.png);
     position: absolute;
     top: 0;
     left: 0;
@@ -339,6 +349,7 @@ canvas {
 
 .popup {
     position: relative;
+    overflow: visible;
     z-index: 100;
     font-family: "anonymous pro";
     border: 1px solid #43FFAE;
@@ -492,57 +503,34 @@ canvas {
     text-shadow: 0 0 10px #ffffffc3; 
 }
 
-/* secondary popup window from .p-link */
-
-/* .new-popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    padding: 20px;
-    z-index: 1000;
-
-    font-family: "anonymous pro";
-    border: 1px solid #43FFAE;
-    color: white;
-    background: #787878a8;
-    backdrop-filter: blur(3px);
-    margin: 10px;
-    box-shadow: 0 0 3px #43FFAE;
-    box-shadow: 0 0 50px rgb(0, 0, 0);
-}
-
-.popup-content {
-    position: relative;
-    text-align: center;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 20px;
-} */
 
 .nested-popup {
-    position: absolute; /* Now it appears over everything */
+    position: fixed; 
+    z-index: 0 !important; 
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 800px; /* Adjust as needed */
-    max-width: 90%;
+    width: auto; 
+    max-width: 80vw;
+   max-height: 90vh;
     background: #787878a8;
     backdrop-filter: blur(3px);
     border: 1px solid #ffffff;
-    /* padding: 20px; */
     margin: 10px;
     text-align: center;
     box-shadow: 0 0 3px #43FFAE;
     box-shadow: 0 0 50px rgb(0, 0, 0);
     color: white;
-    z-index: 10; /* Higher than the parent popup */
+   
+    visibility: hidden;
+}
+
+.nested-popup img {
+    max-width: 100%;
+    max-height: 70vh; /* or 80vh */
+    object-fit: contain;
+    display: block;
+    justify-self: center;
 }
 
 
@@ -552,7 +540,7 @@ canvas {
     color: #383838;
     /* border: 1px solid red; */
     /* position: absolute; */
-    width: 799px;
+    width: 100%;
     height: 35px;
     top: 0;
     display: flex;
@@ -607,6 +595,7 @@ canvas {
 .overlay {
     display: none;
     position: fixed;
+    z-index: 999;
     top: 0;
     left: 0;
     width: 100%;
@@ -825,14 +814,14 @@ margin-top: 20%;
     font-family: "findreplace", sans-serif;
     font-weight: 300;
     font-style: normal;
-    position: fixed;
+    position: relative;
     z-index: 100;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     bottom: 0px;
-    width: 100vw;
+    width: 100%;
     height: 9%;
     background-color: #383838;
     opacity: 90%;
@@ -880,10 +869,16 @@ margin-top: 20%;
 #dotted-line {
     position: absolute;
     z-index: -1;
-    width: 60%;
-    margin-left: 1.8%;
-    top: 51.5%;
+    /* width: 100%; */
+    /* margin-left: 1.8%; */
+    top: 49.5%;
     border: .5px dashed white;
+    /* margin-bottom: 8px; */
+    flex-grow: 1;
+    /* height: 2px; */
+    /* border-top: 2px dotted white; */
+    left: 0;
+    right: 0;
 }
 
 .timeline-node {

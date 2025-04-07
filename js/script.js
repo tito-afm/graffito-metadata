@@ -28,6 +28,17 @@ function reOpenLand() {
     document.getElementById("landing").style.top = "0";
 }
 
+// landing page fade
+
+window.addEventListener("load", function () {
+    setTimeout(() => {
+        const landing = document.getElementById("landing");
+        if (landing) {
+            landing.style.backgroundColor = "#383838ae"; // Or whatever semi-transparent value you want
+        }
+    }, 500); // 1.5 seconds
+});
+
 // spray page opener
 
 const trig2 = document.querySelector('#spray-trigger');
@@ -171,21 +182,20 @@ document.querySelectorAll(".overlay").forEach((popup) => {
 // pop-up for .p-link
 
 document.addEventListener("DOMContentLoaded", function () {
-    
     document.querySelectorAll(".p-link").forEach(link => {
         link.addEventListener("click", function (event) {
-            event.stopPropagation(); // Prevent closing the main popup
+            event.stopPropagation();
 
-            // Remove any existing nested popup before creating a new one
+            // Remove any existing nested popup
             let existingPopup = document.querySelector(".nested-popup");
             if (existingPopup) existingPopup.remove();
 
-            // Get unique content from data attributes
+            // Get unique content
             let imageSrc = this.dataset.image;
             let popupText = this.dataset.text;
             let titleText = this.dataset.title;
 
-            // Create the nested popup dynamically
+            // Create the nested popup
             let nestedPopup = document.createElement("div");
             nestedPopup.classList.add("nested-popup");
             nestedPopup.innerHTML = `
@@ -198,23 +208,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     <p>${popupText}</p>
                 </div>
             `;
-            const pop1 = document.querySelector('#popup1');
-            // Append it directly to the body
-            pop1.appendChild(nestedPopup);
 
-            // // Make the nested popup draggable
-            // setTimeout(() => {
-            //     let nav = nestedPopup.querySelector("#popup-nav");
-            //     makeDraggable(nestedPopup, nav);
-            // }, 10);
+            // Append to body (not to the parent popup)
+            document.body.appendChild(nestedPopup);
 
-            // Close the nested popup when clicking the button
+          
+
+            // Make it visible
+            nestedPopup.style.visibility = 'visible';
+
+            // Close button
             nestedPopup.querySelector(".close-nested").addEventListener("click", function () {
                 nestedPopup.remove();
             });
         });
     });
 });
+
 
 // Draggable function
 function makeDraggable(popup) {
@@ -311,9 +321,10 @@ document.addEventListener("click", function (event) {
         nestedPopup.style.top = "50%";
         nestedPopup.style.transform = "translate(-50%, -50%)"; // Center it
 
-        // Close event
-        nestedPopup.querySelector(".close-nested").addEventListener("click", function () {
-            nestedPopup.remove();
+        // Close event for the nested popup
+        nestedPopup.querySelector(".close-nested").addEventListener("click", function (event) {
+            event.stopPropagation(); // Prevent closing the parent popup
+            nestedPopup.remove(); // Remove the nested popup
         });
     }
 });
@@ -326,5 +337,22 @@ window.addEventListener('load', function() {
     });
 });
 
+function adjustDottedLine() {
+    let tl1 = document.getElementById("tl-1");
+    let tl3 = document.getElementById("tl-3");
+    let dottedLine = document.getElementById("dotted-line");
 
+    let tl1Rect = tl1.getBoundingClientRect();
+    let tl3Rect = tl3.getBoundingClientRect();
+
+    let navBottomRect = document.getElementById("nav-bottom").getBoundingClientRect();
+
+    // Adjust width and position based on tl-1 and tl-3
+    dottedLine.style.left = (tl1Rect.left - navBottomRect.left) + "px";
+    dottedLine.style.width = (tl3Rect.left - tl1Rect.left) + "px";
+}
+
+// Run on load and resize
+window.addEventListener("load", adjustDottedLine);
+window.addEventListener("resize", adjustDottedLine);
 
